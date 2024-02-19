@@ -151,8 +151,8 @@ menu li:hover {
 /* Improves readability by increasing line spacing */
 .main-content p {
     line-height: 1.5; /* Adjusts line height for paragraph text */
-    font-size: 14px;
-    font-family: "Comic Sans MS", cursive, serif;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .PDF embed{
