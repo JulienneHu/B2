@@ -1,0 +1,244 @@
+/* Reset some basic elements for cross-browser consistency */
+html, body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #466995;
+    position: relative;
+    text-align: center;
+    height: 60px;
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the header is above other content */
+    background-color: #466995; /* or any color you wish */
+}
+
+header span {
+    color: #FFFFFF;
+    font-family: "Bradley Hand", cursive, Serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    justify-self: center;
+}
+
+nav {
+    background-color: #466995;
+    box-sizing: border-box;
+    padding: 0 5px;
+    text-align: center;
+    width: 100%;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 60px; /* Height of the header */
+    z-index: 1000; /* Ensures the nav is above other content */
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+}
+
+.nav-items {
+    display: inline-block;
+    margin-right: -4px; 
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Comic Sans MS", cursive, serif, "楷体", "楷体_GB2312";
+    transition: background-color 0.3s ease;
+}
+
+.nav-link.active {
+    background-color: #9b2226; /* A distinct background color for the active link */
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Adjusted nav-link hover effect to complement the active link style */
+.nav-link:hover, .nav-link.active:hover {
+    background-color: #9b2226;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+menu {
+    display: flex; /* Use flexbox to display items in a row */
+    list-style: none; /* Remove default list styling */
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 100px; /* Combined height of the header and nav */
+    z-index: 1000; /* Ensures the menu is above other content */
+    background-color: #f0f0f0; /* A light background color for the menu items or any color you wish */
+}
+
+menu li {
+    padding: 10px 20px; /* Add some spacing around each menu item */
+    background-color: #f0f0f0; /* A light background color for the menu items */
+    margin-right: 10px; /* Add some space between the menu items */
+    border-radius: 5px; /* Optional: adds rounded corners to the menu items */
+    font-size: 12px;
+}
+
+menu li a{
+    color: black;
+    font-family: "Comic Sans MS", cursive, serif;
+}
+
+menu li:last-child {
+    margin-right: 0; /* Remove margin from the last item to avoid extra spacing on the right */
+}
+
+/* Optional: Add a hover effect to menu items */
+menu li:hover {
+    background-color: #cccccc; /* Change color on hover */
+}
+
+/* Main content styling */
+.main-content {
+    padding: 20px; /* Adds some space inside the main content area */
+}
+
+.main-content h3, .main-content h4 {
+    text-align: left; /* Aligns text to the left */
+    color: #333; /* Sets the text color */
+}
+
+.main-content h3 {
+   
+    font-family: "Comic Sans MS", cursive, serif;
+    font-size: 20px; /* Sets the font size */
+    margin: 8px 0;
+}
+
+.main-content h4 {
+    font-family: "Bradley Hand", cursive, Serif; /* Changes the font family */
+    font-size: 20px; /* Sets the font size */
+    margin: 8px 6px 0 0;
+    text-decoration: underline;
+}
+
+/* Content block styling */
+.main-content div[id] {
+    background-color: #f9f9f9; /* Light background color for each content block */
+    padding: 15px; /* Adds padding inside each content block */
+    margin-bottom: 20px; /* Adds space between content blocks */
+    border-radius: 5px; /* Optional: adds rounded corners to the content blocks */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow to each content block */
+}
+
+/* Improves readability by increasing line spacing */
+.main-content p {
+    line-height: 1.5; /* Adjusts line height for paragraph text */
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.PDF embed{
+    width: 100%; /* Makes the PDF take the full width of its container */
+    height: 800px; /* Set a fixed height or use 'auto' if you want it to scale with the width */
+    max-width: 600px; /* Ensures the PDF is not wider than 600px even on larger screens */
+    margin: auto; /
+}
+
+table {
+    width: 80%;
+    font-family: "Comic Sans MS", cursive, serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+p {
+    font-family: "Comic Sans MS", cursive, serif; 
+}
+
+/* Responsive adjustments for smaller screens */
+
+@media (max-width: 768px) {
+    /* Adjust header, nav, and menu for better mobile visibility */
+    header, nav, menu {
+        padding: 0 10px; /* Reduce padding */
+    }
+
+    .nav-link, menu li {
+        padding: 8px 10px; /* Adjust link padding */
+        font-size: 14px; /* Reduce font size for space */
+    }
+
+    menu {
+        flex-direction: column; /* Stack menu items vertically */
+        top: 100px; /* Adjust top position */
+    }
+
+    /* Adjust main content styling */
+    .main-content h3, .main-content h4 {
+        font-size: 16px; /* Reduce font size for headings */
+    }
+
+    .main-content p {
+        font-size: 13px; /* Adjust paragraph font size for readability */
+    }
+
+    .main-content div[id] {
+        padding: 10px; /* Adjust content block padding */
+    }
+
+    .PDF {
+        width: 80%;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    header span {
+        font-size: 24px; /* Reduce header font size */
+    }
+
+    .nav-items {
+        display: block; /* Stack nav items vertically */
+    }
+
+    menu {
+        position: static; /* Optional: Consider disabling sticky position on very small screens */
+    }
+
+    .PDF {
+        width: 100%;
+    }
+}
